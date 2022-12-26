@@ -38,7 +38,7 @@ public class EmployeeBook {
                 return i;
             }
         }
-        throw new RuntimeException("Не индифицирован");
+        throw new RuntimeException("Сотрудник Не индифицирован");
         // throw new NullPointerException("Кота не существует");
         //        } catch (NullPointerException e) {
     }
@@ -62,4 +62,14 @@ public class EmployeeBook {
         }
         return employeeWithMaxSalary;
     }
+
+    public void printAllDepartment(String department) {
+        for (Employee employee : employees) {
+            if (department.equals(employee.getDepartment())) {
+                System.out.println(employee);
+            }
+        }
+    }
+
+
 }
