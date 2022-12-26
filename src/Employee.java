@@ -18,7 +18,22 @@ public class Employee {
     }
 
     public String toString() {
-        return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ " " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + salary;
+        return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ ", " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + salary;
+    }
+
+    public boolean isDepartment(String department) {
+        if (department.equals("1") || department.equals("2") || department.equals("3") || department.equals("4") || department.equals("5")) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Employee employee = (Employee) obj;
+        return id == employee.id;
     }
 
 }
