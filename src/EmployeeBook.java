@@ -1,15 +1,19 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class EmployeeBook {
     private static Employee[] employees = new Employee[10];{
-        employees[0] = new Employee("Ларина", "Ариана", "Ивановна", 2, 35442);
-        employees[1] = new Employee("Галкина", "Анна", "Максимовна", 43, 43550);
-        employees[2] = new Employee("Акимова", "Малика", "Матвеевна", 32, 54353);
-        employees[3] = new Employee("Воронин", "Никита", "Никита", 51, 34324);
-        employees[4] = new Employee("Орлов", "Максим", "Максимович", 12, 54355);
-        employees[5] = new Employee("Кулешов", "Михаил", "Артёмович", 13, 24232);
-        employees[6] = new Employee("Федотов", "Никита", "Романович", 43, 54534);
-        employees[7] = new Employee("Цветков", "Михаил", "Александрович", 21, 33445);
-        employees[8] = new Employee("Яшина", "София", "Ивановна", 11, 55543);
-        employees[9] = new Employee("Филатова", "Амина", "Михайловна", 21, 34567);
+        employees[0] = new Employee("Ларина", "Ариана", "Ивановна", 1, 35442);
+        employees[1] = new Employee("Галкина", "Анна", "Максимовна", 2, 43550);
+        employees[2] = new Employee("Акимова", "Малика", "Матвеевна", 3, 54353);
+        employees[3] = new Employee("Воронин", "Никита", "Никита", 4, 34324);
+        employees[4] = new Employee("Орлов", "Максим", "Максимович", 5, 54355);
+        employees[5] = new Employee("Кулешов", "Михаил", "Артёмович", 6, 24232);
+        employees[6] = new Employee("Федотов", "Никита", "Романович", 7, 54534);
+        employees[7] = new Employee("Цветков", "Михаил", "Александрович", 8, 33445);
+        employees[8] = new Employee("Яшина", "София", "Ивановна", 9, 55543);
+        employees[9] = new Employee("Филатова", "Амина", "Михайловна", 10, 34567);
     }
 
     public void printEmployee() {
@@ -71,5 +75,22 @@ public class EmployeeBook {
         }
     }
 
+    public void printAllEmployeeDepartment() {
+        List<String> departments = findAllDepartment();
+        for (String department : departments) {
+            System.out.println("В отделе №: " + department + ", работают");
+            printAllDepartment(department);
+        }
+    }
+
+    public List<String> findAllDepartment() {
+        List<String> allDepartment = new ArrayList<>();
+        for (Employee employee : employees) {
+            if (employee != null && !allDepartment.contains(employee.getDepartment())) {
+                allDepartment.add(String.valueOf(employee.getDepartment()));
+            }
+        }
+        return  allDepartment;
+    }
 
 }
