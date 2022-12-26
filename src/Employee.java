@@ -38,14 +38,20 @@ public class Employee {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-    public String getDepartment() {
+    public int getDepartment() {
         return department;
     }
-
-    public void setDepartment(String department) {
+    public void setDepartment(int department) {
         this.department = department;
     }
 
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary
+    }
     public String toString() {
         return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ ", " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + String.format("%.2f",salary);
     }

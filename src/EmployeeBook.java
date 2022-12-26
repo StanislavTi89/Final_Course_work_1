@@ -22,7 +22,7 @@ public class EmployeeBook {
         double sum = 0d;
         for (Employee employee : employees) {
             if (employee != null) {
-                sum += employee.getSalary;
+                sum += employee.getSalary();
             }
         }
         return sum;
@@ -33,9 +33,12 @@ public class EmployeeBook {
     }
 
     public Employee getMinSalaryEmployee() {
-        Employee employeeWithMinSalary = employees[getMinSalaryEmployee()];
+        Employee employeeWithMinSalary = employees[getMinSalaryEmployee().getDepartment()];
         for (int i = getMinSalaryEmployee() + 1; i < employees.length; i++) {
-            if (employees[i] != null && employees[i].)
+            if (employees[i] != null && employees[i].getSalary() < employeeWithMinSalary.getSalary()) {
+                employeeWithMinSalary = employees[i];
+            }
         }
+        return employeeWithMinSalary;
     }
 }
