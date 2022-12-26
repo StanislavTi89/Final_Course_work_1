@@ -14,7 +14,11 @@ public class Employee {
         this.lastName = lastName;
         this.department = department;
         this.salary = salary;
+        count++;
+    }
 
+    public String toString() {
+        return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ " " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + salary;
     }
 
 }
