@@ -50,7 +50,7 @@ public class Employee {
     }
 
     public void setSalary(double salary) {
-        this.salary = salary
+        this.salary = salary;
     }
     public String toString() {
         return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ ", " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + String.format("%.2f",salary);

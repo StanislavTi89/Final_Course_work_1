@@ -32,13 +32,34 @@ public class EmployeeBook {
         System.out.println(sumSalary());
     }
 
+    public int getIndexSalaryEmployee() {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                return i;
+            }
+        }
+        throw new RuntimeException("Не индифицирован");
+        // throw new NullPointerException("Кота не существует");
+        //        } catch (NullPointerException e) {
+    }
+
     public Employee getMinSalaryEmployee() {
-        Employee employeeWithMinSalary = employees[getMinSalaryEmployee().getDepartment()];
-        for (int i = getMinSalaryEmployee() + 1; i < employees.length; i++) {
+        Employee employeeWithMinSalary = employees[getIndexSalaryEmployee()];
+        for (int i = getIndexSalaryEmployee() + 1; i < employees.length; i++) {
             if (employees[i] != null && employees[i].getSalary() < employeeWithMinSalary.getSalary()) {
                 employeeWithMinSalary = employees[i];
             }
         }
         return employeeWithMinSalary;
+    }
+
+    public Employee getMaxSalaryEmployee() {
+        Employee employeeWithMaxSalary = employees[getIndexSalaryEmployee()];
+        for (int i = getIndexSalaryEmployee() + 1; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].getSalary() > employeeWithMaxSalary.getSalary()) {
+                employeeWithMaxSalary = employees[i];
+            }
+        }
+        return employeeWithMaxSalary;
     }
 }
