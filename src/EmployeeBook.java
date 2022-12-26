@@ -32,6 +32,15 @@ public class EmployeeBook {
         return sum;
     }
 
+    public void addEmployee(Employee employee) {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] == null) {
+                employees[i]=employee;
+                return;
+            }
+        }
+    }
+
     public void printSumSalaryIndex() {
         System.out.println(sumSalary());
     }
