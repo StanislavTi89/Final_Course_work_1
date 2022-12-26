@@ -87,7 +87,7 @@ public class EmployeeBook {
         List<String> allDepartment = new ArrayList<>();
         for (Employee employee : employees) {
             if (employee != null && !allDepartment.contains(employee.getDepartment())) {
-                allDepartment.add(String.valueOf(employee.getDepartment()));
+                allDepartment.add(String.valueOf(employee.getDepartment())); //ALT
             }
         }
         return  allDepartment;
