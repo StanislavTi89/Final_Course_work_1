@@ -18,6 +18,34 @@ public class Employee {
         count++;
     }
 
+    public String getSurName() {
+        return surName;
+    }
+    public void setSurName(String surName) {
+        this.surName = surName;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
     public String toString() {
         return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ ", " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + String.format("%.2f",salary);
     }

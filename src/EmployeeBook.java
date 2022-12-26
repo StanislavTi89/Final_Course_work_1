@@ -28,11 +28,14 @@ public class EmployeeBook {
         return sum;
     }
 
-    public void printSumSalary() {
+    public void printSumSalaryIndex() {
         System.out.println(sumSalary());
     }
 
-    public double getMinSalary() {
-        double min = getMinSalary();
+    public Employee getMinSalaryEmployee() {
+        Employee employeeWithMinSalary = employees[getMinSalaryEmployee()];
+        for (int i = getMinSalaryEmployee() + 1; i < employees.length; i++) {
+            if (employees[i] != null && employees[i].)
+        }
     }
 }
