@@ -39,6 +39,7 @@ public class EmployeeBook {
                 return;
             }
         }
+        System.out.println("Не числится");
     }
 
     public void printSumSalaryIndex() {
