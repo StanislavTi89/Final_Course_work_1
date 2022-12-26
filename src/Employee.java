@@ -1,12 +1,12 @@
 
 public class Employee {
-    public String name;
-    public String surName;
-    public String lastName;
-    public int department;
-    public double salary;
-    public long id = count;
-    public static long count = 1L;
+    private String name;
+    private String surName;
+    private String lastName;
+    private int department;
+    private double salary;
+    private final long id = count;
+    private static long count = 1L;
 
     public Employee(String surName, String name, String lastName, int department, double salary) {
         this.surName = surName;
