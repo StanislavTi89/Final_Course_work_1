@@ -79,7 +79,7 @@ public class EmployeeBook {
 
     public void printAllDepartment(String department) {
         for (Employee employee : employees) {
-            if (department.equals(employee.getDepartment())) {
+            if (findAllDepartment().isEmpty())  {
                 System.out.println(employee);
             }
         }

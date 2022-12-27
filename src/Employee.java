@@ -53,7 +53,7 @@ public class Employee {
         this.salary = salary;
     }
     public String toString() {
-        return "Сотрудник: " + "Ф.И.О. " + surName + " " + name + " " +lastName+ ", " + id + "Сотрудник отдела: " + department + ", выплата оклада: " + String.format("%.2f",salary);
+        return "Сотрудник: "  + surName + " " + name + " " +lastName+ ", " + "Сотрудник отдела: " + department + ", выплата оклада: " + String.format("%.2f",salary);
     }
     //String sf1=String.format("name is %s",name);
     //String sf2=String.format("value is %f",32.33434);
